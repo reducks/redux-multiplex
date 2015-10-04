@@ -1,4 +1,4 @@
-const defaultGetId = (action) => action.meta && action.meta.id;
+const defaultGetId = (action) => action.meta && action.meta.__multiplex;
 
 export default (actionTypes = [], getId = defaultGetId) => (reducer) => {
   return (state = {}, action) => {

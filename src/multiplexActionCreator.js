@@ -2,7 +2,7 @@ const defaultCreateAction = (action, id) => ({
   ...action,
   meta: {
     ...action.meta,
-    id,
+    __multiplex: id,
   },
 });
 
